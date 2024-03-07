@@ -56,6 +56,7 @@ table {
 :root {
     --white-accent: white;
     --gray-accent: whitesmoke;
+    --dark-accent: rgb(85, 85, 85);
     --blue-accent: #318CE7;
     --low-accent: green;
     --medium-accent: orange;
@@ -65,6 +66,48 @@ table {
 /* Base Styling */
 
 body {
+    color: var(--white-accent);
     font-size: 16px;
     font-family: Garamond, sans-serif;
+}
+
+button {
+    font-size: 1rem;
+    font-family: Garamond, sans-serif;
+}
+
+body, header {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--dark-accent);
+    align-items: center;
+}
+
+header h1 {
+    font-size: 4rem;
+    padding: 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav button {
+    padding: 0.5rem 1rem;
+    color: var(--white-accent);
+    background-color: var(--dark-accent);
+    border: none;
+    transition: 0.25s ease-in-out;
+}
+
+nav button.active {
+    border-bottom: 1px solid var(--white-accent);
+}
+
+nav button:hover {
+    transform: translateY(-2px);
 }
