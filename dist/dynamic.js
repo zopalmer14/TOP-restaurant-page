@@ -7,7 +7,7 @@ function initializePage() {
     //loadHome();
 
     // TESTING
-    loadMenu();
+    loadAbout();
 }
 
 function setupNav() {
@@ -123,11 +123,24 @@ function loadAbout() {
     // dom references 
     const page_content = document.querySelector('#content');
 
-    // create div to test
-    const test = document.createElement('div');
-    test.textContent = 'about';
+    // create div to contain the about info
+    const about_container = document.createElement('div');
+    about_container.classList.add('about-info');
+    about_container.textContent = 'Testing! Please Work!'
 
-    page_content.replaceChildren(test);
+    // create a cool image to place adjacent to the info
+    const img_container = document.createElement('div');
+    img_container.classList.add('about-img');
+
+    const about_img = document.createElement('img');
+    about_img.src = '../src/portland-sign.jpg';
+
+    img_container.appendChild(about_img);
+
+    // empty the content then append the about container and img
+    page_content.replaceChildren();
+    page_content.appendChild(about_container);
+    page_content.appendChild(img_container);
 }
 
 function toggleActive(button) {

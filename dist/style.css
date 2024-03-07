@@ -125,18 +125,13 @@ nav button:hover {
 #content {
     color: black;
     flex: 1 1 0;
-}
 
-#content, #content .home-info {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-/* HOME STYLING */
-
-#content .home-info, #content .menu-info {
-    margin-top: 4rem;
+#content .home-info, #content .menu-info, #content .about-info {
     padding: 2rem;
     min-width: 45ch;
     max-width: 85ch;
@@ -146,6 +141,14 @@ nav button:hover {
 
     background-color: var(--dark-accent);
     border: 1px solid black;
+}
+
+/* HOME STYLING */
+
+#content .home-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #content .home-info img {
@@ -202,3 +205,25 @@ nav button:hover {
 #content .menu-info .menu-item .item-container h2 {
     font-size: 1.5rem;
 }
+
+/* ABOUT STYLING */
+
+#content .about-info {
+    min-width: 20%;
+    min-height: 25%;
+    z-index: 2;
+}
+
+#content .about-img {
+    position: relative;
+    left: -10%;
+
+    height: 75%;
+    width: 40%;
+}
+
+#content .about-img img {
+    height: 100%;
+    width: 100%;
+}
+
