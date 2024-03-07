@@ -56,7 +56,7 @@ table {
 :root {
     --white-accent: white;
     --gray-accent: whitesmoke;
-    --dark-accent: rgb(85, 85, 85);
+    --dark-accent: rgba(85, 85, 85, 0.8);
     --blue-accent: #318CE7;
     --low-accent: green;
     --medium-accent: orange;
@@ -66,9 +66,17 @@ table {
 /* Base Styling */
 
 body {
-    color: var(--white-accent);
     font-size: 16px;
     font-family: Garamond, sans-serif;
+
+    color: var(--white-accent);
+    width: 100vw;
+    height: 100vh;
+
+    background: url(../src/restaurant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
 }
 
 button {
@@ -110,4 +118,36 @@ nav button.active {
 
 nav button:hover {
     transform: translateY(-2px);
+}
+
+/* CONTENT STYLING */
+
+#content {
+    color: black;
+    flex: 1 1 0;
+}
+
+#content, #content .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content .info {
+    margin-top: 4rem;
+    padding: 2rem;
+    max-width: 45ch;
+
+    font-size: 1.5rem;
+    color: var(--white-accent);
+
+    background-color: var(--dark-accent);
+    border: 1px solid black;
+}
+
+#content .info img {
+    margin: 1rem 0;
+    width: 30ch;
+    height: 30ch; 
+    border-radius: 50%;
 }
