@@ -70,12 +70,12 @@ body {
     font-family: Garamond, sans-serif;
 
     color: var(--white-accent);
-    width: 100vw;
-    height: 100vh;
+    line-height: 1.5;
+    max-width: 100vw;
+    min-height: 100vh;
 
     background: url(../src/restaurant.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center center; 
 }
 
@@ -127,16 +127,19 @@ nav button:hover {
     flex: 1 1 0;
 }
 
-#content, #content .info {
+#content, #content .home-info {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#content .info {
+/* HOME STYLING */
+
+#content .home-info, #content .menu-info {
     margin-top: 4rem;
     padding: 2rem;
-    max-width: 45ch;
+    min-width: 45ch;
+    max-width: 85ch;
 
     font-size: 1.5rem;
     color: var(--white-accent);
@@ -145,9 +148,57 @@ nav button:hover {
     border: 1px solid black;
 }
 
-#content .info img {
-    margin: 1rem 0;
+#content .home-info img {
+    margin: 2rem 0;
     width: 30ch;
     height: 30ch; 
     border-radius: 50%;
+}
+
+/* MENU STYLING */
+
+#content .menu-info {
+    display: grid;
+    grid-template: 300px / repeat(2, 1fr);
+    grid-auto-rows: 300px;
+}
+
+#content .menu-info .menu-item {
+    display: flex;
+    align-items: center;
+}
+
+#content .menu-info .menu-item > div {
+    background-color: black;
+}
+
+#content .menu-info .menu-item .img-container {
+    padding: 25px;
+    z-index: 2;
+}
+
+#content .menu-info .menu-item .img-container img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+#content .menu-info .menu-item .item-container {
+    position: relative;
+    left: -75px;
+
+    max-width: 40ch;
+    min-height: 200px;
+    padding: 1rem;
+    padding-left: calc(75px + 1rem);
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#content .menu-info .menu-item .item-container h2 {
+    font-size: 1.5rem;
 }
