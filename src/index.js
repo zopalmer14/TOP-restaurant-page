@@ -1,4 +1,8 @@
 
+import './style.css';
+import PortlandSign from './portland-sign.jpg';
+import Restaurant from './restaurant.jpg';
+
 function initializePage() {
     // setup the nav buttons to facilitate tabbed browsing
     setupNav();
@@ -48,8 +52,8 @@ function loadHome() {
     `;
 
     // cool image 
-    const cool_img = document.createElement('img');
-    cool_img.src = '../src/portland-sign.jpg';
+    const cool_img = new Image();
+    cool_img.src = PortlandSign;
 
     // second text section
     const restaurant_aside = document.createElement('div');
@@ -83,8 +87,8 @@ function loadMenu() {
         const img_container = document.createElement('div');
         img_container.classList.add('img-container');
 
-        const item_img = document.createElement('img');
-        item_img.src = '../src/portland-sign.jpg';
+        const item_img = new Image();
+        item_img.src = PortlandSign;
 
         img_container.appendChild(item_img);
 
@@ -129,8 +133,8 @@ function loadAbout() {
     const img_container = document.createElement('div');
     img_container.classList.add('about-img');
 
-    const about_img = document.createElement('img');
-    about_img.src = '../src/portland-sign.jpg';
+    const about_img = new Image();
+    about_img.src = PortlandSign;
 
     img_container.appendChild(about_img);
 

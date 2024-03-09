@@ -74,7 +74,7 @@ body {
     max-width: 100vw;
     min-height: 100vh;
 
-    background: url(../src/restaurant.jpg);
+    background: url(restaurant.jpg);
     background-size: cover;
     background-position: center center; 
 }
@@ -132,7 +132,6 @@ nav button:hover {
 }
 
 #content .home-info, #content .menu-info, #content .about-info {
-    padding: 2rem;
     min-width: 45ch;
     max-width: 85ch;
 
@@ -146,6 +145,8 @@ nav button:hover {
 /* HOME STYLING */
 
 #content .home-info {
+    padding: 2rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,6 +162,8 @@ nav button:hover {
 /* MENU STYLING */
 
 #content .menu-info {
+    padding-left: 75px;
+
     display: grid;
     grid-template: 300px / repeat(2, 1fr);
     grid-auto-rows: 300px;
