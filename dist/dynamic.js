@@ -4,10 +4,7 @@ function initializePage() {
     setupNav();
 
     // load the home 'tab' by default
-    //loadHome();
-
-    // TESTING
-    loadAbout();
+    loadHome();
 }
 
 function setupNav() {
@@ -126,7 +123,7 @@ function loadAbout() {
     // create div to contain the about info
     const about_container = document.createElement('div');
     about_container.classList.add('about-info');
-    about_container.textContent = 'Testing! Please Work!'
+    about_container.textContent = 'Testing! Please Work!';
 
     // create a cool image to place adjacent to the info
     const img_container = document.createElement('div');
