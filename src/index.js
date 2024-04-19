@@ -1,15 +1,7 @@
 
 import './style.css';
-import PortlandSign from './portland-sign.jpg';
-import Restaurant from './restaurant.jpg';
-
-function initializePage() {
-    // setup the nav buttons to facilitate tabbed browsing
-    setupNav();
-
-    // load the home 'tab' by default
-    loadHome();
-}
+import ManhattanCocktail from './media/manhattan_cocktail.jpg';
+import PortlandSign from './media/portland-sign.jpg';
 
 function setupNav() {
     // dom references
@@ -53,7 +45,7 @@ function loadHome() {
 
     // cool image 
     const cool_img = new Image();
-    cool_img.src = PortlandSign;
+    cool_img.src = ManhattanCocktail;
 
     // second text section
     const restaurant_aside = document.createElement('div');
@@ -153,5 +145,12 @@ function toggleActive(button) {
     button.classList.add('active');
 }
 
-// wire the JS logic
+function initializePage() {
+    // setup the nav buttons to facilitate tabbed browsing
+    setupNav();
+
+    // load the home 'tab' by default
+    loadHome();
+}
+
 initializePage();
