@@ -1,7 +1,27 @@
 
+// import in CSS styling
 import './style.css';
-import ManhattanCocktail from './media/manhattan_cocktail.jpg';
+
 import PortlandSign from './media/portland-sign.jpg';
+
+// import in drink images
+import ManhattanCocktail from './media/manhattan_cocktail.jpg';
+
+// import in food images
+import Brisket from './media/food/brisket.jpg';
+import Kebab from './media/food/kebab.jpg';
+import Ribs from './media/food/ribs.jpg';
+import Tacos from './media/food/tacos.jpg';
+
+// food data
+const foodImages = [Brisket, Kebab, Ribs, Tacos];
+const foodHeaders = ['Prime Brisket', 'Chicken Kebab Plate', 'BBQ Pork Ribs', 'Pulled Pork Tacos'];
+const foodDesc = [
+    '1/3 lb Prime aged beef, hand sliced with our original sauce, brown beans, coleslaw, and cornbread',
+    'Marinated, seasoned chicken served with fries, tomatoes, and bell peppers',
+    'Duroc St. Louis ribs, dry rubbed and slow smoked, lightly glazed with our original BBQ sauce',
+    'Pulled pork topped with Sriracha coleslaw'
+];
 
 function setupNav() {
     // dom references
@@ -80,7 +100,7 @@ function loadMenu() {
         img_container.classList.add('img-container');
 
         const item_img = new Image();
-        item_img.src = PortlandSign;
+        item_img.src = foodImages[i];
 
         img_container.appendChild(item_img);
 
@@ -89,14 +109,11 @@ function loadMenu() {
         item_container.classList.add('item-container');
 
         const item_title = document.createElement('h2');
-        item_title.textContent = 'Test Menu Item';
+        item_title.textContent = foodHeaders[i];
 
         const item_desc = document.createElement('div');
         item_desc.classList.add('item-desc');
-        item_desc.textContent = `
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus fuga iure unde architecto numquam dolores fugiat velit . . .
-        `;
+        item_desc.textContent = foodDesc[i];
 
         item_container.appendChild(item_title);
         item_container.appendChild(item_desc);
