@@ -162,18 +162,17 @@ header nav button span {
 /* HOME STYLING */
 
 #content .home-info {
-    padding: 2rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 #content .home-info img {
-    margin: 2rem 0;
-    width: 30ch;
-    height: 30ch; 
+    width: 350px;
+    height: 350px; 
     border-radius: 50%;
 
     object-fit: cover;
@@ -211,6 +210,14 @@ header nav button span {
     height: 150px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+#content .menu-info .menu-item .img-container img#moscow-mule {
+    object-position: center 40%;
+}
+
+#content .menu-info .menu-item .img-container img#espresso-martini {
+    object-position: center 0%;
 }
 
 #content .menu-info .menu-item .item-container {

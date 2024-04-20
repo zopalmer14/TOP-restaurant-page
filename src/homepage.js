@@ -1,6 +1,6 @@
 
 // import in cool drink image
-import ManhattanCocktail from './media/manhattan_cocktail.jpg';
+import ManhattanCocktail from './media/drinks/manhattan_cocktail.jpg';
 
 function loadHome() {
     // dom references 
