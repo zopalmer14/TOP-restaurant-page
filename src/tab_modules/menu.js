@@ -23,7 +23,7 @@ function loadMenu() {
     const menu_container = document.createElement('div');
     menu_container.classList.add('menu-info');
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < foodImages.length; i++) {
         // create a div to represent each individual menu item
         const menu_item = document.createElement('div');
         menu_item.classList.add('menu-item');

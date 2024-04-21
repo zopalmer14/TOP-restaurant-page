@@ -9,7 +9,7 @@ import AperolSpritz from './media/drinks/aperol_spritz.jpg';
 // food data
 const drinkImages = [ManhattanCocktail, EspressoMartini, MoscowMule, AperolSpritz];
 const drinkHeaders = ['Manhattan', 'Espresso Martini', 'Moscow Mule', 'Aperol Spritz'];
-const foodDesc = [
+const drinkDesc = [
     'Classic cocktail made with bourbon, sweet vermouth, and aromatic bitters',
     'Espresso, vanilla vodka, and coffee liqueur',
     'Zesty cocktail with vodka, ginger beer, and a squeeze of lime in a copper mug',
@@ -24,7 +24,7 @@ function loadTapList() {
     const menu_container = document.createElement('div');
     menu_container.classList.add('menu-info');
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < drinkImages.length; i++) {
         // create a div to represent each individual menu item
         const menu_item = document.createElement('div');
         menu_item.classList.add('menu-item');
@@ -55,7 +55,7 @@ function loadTapList() {
 
         const item_desc = document.createElement('div');
         item_desc.classList.add('item-desc');
-        item_desc.textContent = foodDesc[i];
+        item_desc.textContent = drinkDesc[i];
 
         item_container.appendChild(item_title);
         item_container.appendChild(item_desc);

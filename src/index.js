@@ -3,10 +3,10 @@
 import './style.css';
 
 // import in tab content modules
-import { loadHome } from './homepage.js';
-import { loadMenu } from './menu.js';
-import { loadTapList } from './taplist.js';
-import { loadAbout } from './about.js';
+import { loadHome } from './tab_modules/homepage.js';
+import { loadMenu } from './tab_modules/menu.js';
+import { loadTapList } from './tab_modules/taplist.js';
+import { loadAbout } from './tab_modules/about.js';
 
 function setupNav() {
     // dom references

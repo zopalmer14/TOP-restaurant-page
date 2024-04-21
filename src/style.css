@@ -80,6 +80,8 @@ body {
     display: flex;
 }
 
+/* Header / Nav Styling */
+
 header {
     display: flex;
     flex-direction: column;
@@ -99,7 +101,7 @@ header h1 {
 }
 
 header .logo-container {
-    background: url(media/pigs/cute_pig.jpg);
+    background: url(tab_modules/media/pigs/cute_pig.jpg);
     background-size: cover;
     background-position: center center; 
 
@@ -136,14 +138,14 @@ header nav button span {
     margin-right: 1.5rem;
 }
 
-/* CONTENT STYLING */
+/* Content Styling */
 
 #content {
-    background: url(media/rustic_bar.jpg);
+    background: url(tab_modules/media/rustic_bar.jpg);
     background-size: cover;
     background-position: center center; 
 
-    color: black;
+    color: var(--dark-accent);
     flex: 1 1 0;
 
     display: flex;
@@ -159,12 +161,16 @@ header nav button span {
     color: white;
 }
 
-/* HOME STYLING */
+/* Homepage Styling */
 
 #content .home-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    background-color: rgba(37, 22, 27, 0.6);
+    border: 1px solid var(--dark-accent);
+    border-radius: 10px;
     text-align: center;
     gap: 2rem;
     padding: 2rem;
@@ -179,14 +185,13 @@ header nav button span {
     object-position: 50% 45%;
 }
 
-/* MENU STYLING */
+/* Menu Styling */
 
 #content .menu-info {
-    padding-left: 100px;
-
     display: grid;
     grid-template: 350px / repeat(2, 1fr);
     grid-auto-rows: 350px;
+    padding-left: 100px;
 }
 
 #content .menu-info .menu-item {
@@ -195,12 +200,12 @@ header nav button span {
 }
 
 #content .menu-info .menu-item > div {
-    background-color: black;
+    background-color: var(--dark-accent);
 }
 
 #content .menu-info .menu-item .img-container {
     padding: 25px;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 2;
 }
 
@@ -228,7 +233,7 @@ header nav button span {
     min-height: 250px;
     padding: 1rem;
     padding-left: calc(100px + 1rem);
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 1rem;
 
     display: flex;
@@ -241,24 +246,41 @@ header nav button span {
     font-size: 1.5rem;
 }
 
-/* ABOUT STYLING */
+/* About / Contact Styling */
 
 #content .about-info {
-    min-width: 20%;
-    min-height: 25%;
-    z-index: 2;
+    display: flex;
+    gap: 3rem;
+
+    background-color: rgba(37, 22, 27, 0.6);
+    border: 1px solid var(--dark-accent);
+    border-radius: 10px;
 }
 
-#content .about-img {
-    position: relative;
-    left: -10%;
-
-    height: 75%;
-    width: 40%;
+#content .about-info .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-#content .about-img img {
-    height: 100%;
-    width: 100%;
+#content .about-info .about-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#content .about-info .about-images .about-img {
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#content .about-info .about-images .about-img img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
