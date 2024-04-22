@@ -28,16 +28,7 @@ function loadMenu() {
         const menu_item = document.createElement('div');
         menu_item.classList.add('menu-item');
 
-        // create a container for the image and append the image to it
-        const img_container = document.createElement('div');
-        img_container.classList.add('img-container');
-
-        const item_img = new Image();
-        item_img.src = foodImages[i];
-
-        img_container.appendChild(item_img);
-
-        // create a container for the item - contains the item name / title and a desc
+        // create the contents - the item name / title, a desc, and an image
         const item_container = document.createElement('div');
         item_container.classList.add('item-container');
 
@@ -48,12 +39,18 @@ function loadMenu() {
         item_desc.classList.add('item-desc');
         item_desc.textContent = foodDesc[i];
 
-        item_container.appendChild(item_title);
-        item_container.appendChild(item_desc);
+        // create a container for the image and append the image to it
+        const img_container = document.createElement('div');
+        img_container.classList.add('img-container');
 
-        // append the image container and item container to the menu_item
+        const item_img = new Image();
+        item_img.src = foodImages[i];
+
+        img_container.appendChild(item_img);
+
         menu_item.appendChild(img_container);
-        menu_item.appendChild(item_container);
+        menu_item.appendChild(item_title);
+        menu_item.appendChild(item_desc);
 
         // append the menu_item to the container
         menu_container.appendChild(menu_item);

@@ -46,10 +46,7 @@ function loadTapList() {
 
         img_container.appendChild(item_img);
 
-        // create a container for the item - contains the item name / title and a desc
-        const item_container = document.createElement('div');
-        item_container.classList.add('item-container');
-
+        // create the contents - item name / title, a desc, and an image
         const item_title = document.createElement('h2');
         item_title.textContent = drinkHeaders[i];
 
@@ -57,12 +54,10 @@ function loadTapList() {
         item_desc.classList.add('item-desc');
         item_desc.textContent = drinkDesc[i];
 
-        item_container.appendChild(item_title);
-        item_container.appendChild(item_desc);
-
-        // append the image container and item container to the menu_item
+        // append the contents to the menu_item
         menu_item.appendChild(img_container);
-        menu_item.appendChild(item_container);
+        menu_item.appendChild(item_title);
+        menu_item.appendChild(item_desc);
 
         // append the menu_item to the container
         menu_container.appendChild(menu_item);
