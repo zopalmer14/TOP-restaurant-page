@@ -111,16 +111,18 @@ header .logo-container {
 header nav ul {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 header nav button {
     font-size: 1.25rem;
     font-weight: 600;
 
-    padding: 0.5rem 0;
+    padding-top: 0.5rem;
     background-color: var(--tan-accent);
     border: none;
+    border-bottom: 1px solid transparent;
     transition: 0.25s ease-in-out;
 }
 
@@ -129,11 +131,8 @@ header nav button.active {
 }
 
 header nav button:hover {
-    transform: translateX(5px);
-}
-
-header nav button span {
-    margin-right: 1.5rem;
+    border-bottom: 1px solid var(--dark-accent);
+    transform: translateY(-2px);
 }
 
 /* Content Styling */
@@ -269,8 +268,80 @@ header nav button span {
 
 /* Media Queries */
 
+/* Large Laptop */ 
+
 @media (max-width: 1400px) {
     #content .menu-info {
         padding: 3rem;
+    }
+}
+
+/* Large Laptop */
+
+@media (max-width: 1150px) {
+    body {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: row;
+        max-width: none;
+        padding: 1rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+        margin-right: auto;
+    }
+
+    header .logo-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        order: 1;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    header nav button {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.5rem;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    header .logo-container {
+        display: none;
+    }
+
+    header nav button {
+        font-size: 0.75rem;
+        font-weight: normal;
+    }
+
+    #content .menu-info {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Mobile */ 
+
+@media (max-width: 600px) {
+    #content .menu-info .menu-item {
+        padding: 0.75rem;
     }
 }
