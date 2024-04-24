@@ -8,6 +8,15 @@ import { loadMenu } from './tab_modules/menu.js';
 import { loadTapList } from './tab_modules/taplist.js';
 import { loadAbout } from './tab_modules/about.js';
 
+// DOM references
+const content = document.querySelector('#content');
+const image_citation = document.querySelector('.image-citation');
+
+// adds the image citation to the bottom of the content section
+function addCitation() {
+    content.appendChild(image_citation);
+}
+
 function setupNav() {
     // dom references
     const home_button = document.querySelector('#home-button');
@@ -18,24 +27,28 @@ function setupNav() {
     // load the home 'tab' content when it is clicked and toggle the active tab
     home_button.addEventListener('click', (event) => {
         loadHome();
+        addCitation();
         toggleActive(event.currentTarget);
     });
 
     // load the menu 'tab' content when it is clicked
     menu_button.addEventListener('click', (event) => {
         loadMenu();
+        addCitation();
         toggleActive(event.currentTarget);
     });
 
     // load the taplist 'tab' content when it is clicked
     taplist_button.addEventListener('click', (event) => {
         loadTapList();
+        addCitation();
         toggleActive(event.currentTarget);
     });
 
     // load the about 'tab' content when it is clicked
     about_button.addEventListener('click', (event) => {
         loadAbout();
+        addCitation();
         toggleActive(event.currentTarget);
     });
 }
@@ -55,6 +68,7 @@ function initializePage() {
 
     // load the home 'tab' by default
     loadHome();
+    addCitation();
 }
 
 initializePage();

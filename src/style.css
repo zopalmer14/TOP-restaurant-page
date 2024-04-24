@@ -136,6 +136,7 @@ header nav button:hover {
 /* Content Styling */
 
 #content {
+    position: relative;
     background: url(tab_modules/media/rustic_bar.jpg);
     background-size: cover;
     background-position: center center; 
@@ -147,6 +148,19 @@ header nav button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#content .image-citation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#content .image-citation, #content .image-citation a {
+    color: white;
+    font-size: 0.75rem;
+    text-wrap: nowrap;
 }
 
 #content .home-info, #content .about-info {
